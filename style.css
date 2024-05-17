@@ -1,0 +1,78 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.vawe {
+  position: relative;
+  float: left;
+  margin: 20px;
+  animation: vawe ease-in-out 0.6s infinite alternate;
+  transform-origin: center -40px;
+}
+
+.vawe::before {
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-image: url("https://cdn.hashnode.com/res/hashnode/image/upload/v1602040503586/FW6g79WBY.png");
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  z-index: 21;
+}
+
+.vawe::after {
+  position: absolute;
+  content: "";
+  top: -15px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid #ffffff;
+  border-bottom: none;
+  border-right: none;
+  transform: rotate(48deg);
+}
+
+.vawe:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.vawe img {
+  display: block;
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 3px solid #ffffff;
+}
+
+.vawe figcaption {
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+@keyframes vawe {
+  0% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
